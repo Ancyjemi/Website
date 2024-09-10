@@ -4,91 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
     <style>
       * {
         margin: 0px;
         padding: 0px;
       }
       body {
-        height: 100vh;
+        /* height: 100vh; */
         width: 100vw;
         background-color: #f5f5f5;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
       }
       .section1 {
         width: 70%;
         height: 10rem;
-        /* background-color: aquamarine; */
-        background: #ee9ca7; /* fallback for old browsers */
-        background: -webkit-linear-gradient(
-          to right,
-          #ffdde1,
-          #ee9ca7
-        ); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(
-          to right,
-          #ffdde1,
-          #ee9ca7
-        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+        background: #41295a;
+        background: -webkit-linear-gradient(to right, #2f0743, #41295a);
+        background: linear-gradient(to right, #2f0743, #41295a);
+        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: row;
-        box-shadow: 3.4px 3.7px 2.7px rgba(0, 0, 0, 0.04),
-          8.7px 9.5px 6.9px rgba(0, 0, 0, 0.058),
-          17.7px 19.3px 14.2px rgba(0, 0, 0, 0.072),
-          36.5px 39.8px 29.2px rgba(0, 0, 0, 0.09),
-          100px 109px 80px rgba(0, 0, 0, 0.13);
+        border-radius: 5px;
       }
       .profile-img-section {
         width: 40%;
-        height: 80%;
+        height: 100%;
+        display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
       }
       .profile-data {
         width: 40%;
-        height: 30%;
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
       }
       .profile-img {
         height: 8rem;
-        width: 30%;
+        width: 8rem;
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
       }
       .section2 {
         width: 70%;
-        height: 10rem;
+        height: 6rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: start;
         border: 1px solid rgb(244, 236, 236);
       }
       .section3 {
         width: 70%;
-        height: 10rem;
+        height: 15rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+        align-items: start;
         border: 1px solid rgb(244, 236, 236);
       }
       .section-title {
-        color: rgb(46, 186, 139);
+        font-weight: bold;
       }
       .ed-table {
         width: 100%;
         border: 1px solid black;
         border-collapse: collapse;
+      }
+      th {
+        background-color: #3c0e63;
+        color: #fff;
       }
       th,
       td {
@@ -106,10 +97,11 @@
       }
       .companies {
         color: black;
+        font-weight: bold;
       }
       .section5 {
         width: 70%;
-        height: 10rem;
+        height: 8rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -120,66 +112,150 @@
         list-style: square;
         margin-left: 2rem;
       }
+      .color-palate {
+        color: #2f0743;
+      }
+      .section6 {
+        width: 70%;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        border: 1px solid rgb(244, 236, 236);
+      }
+      .section7 {
+        width: 70%;
+        height: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        font-weight: bold;
+        background-color: #2f0743;
+      }
+      .text-white {
+        color: rgb(236, 228, 228);
+      }
+      .un-font {
+        font-size: small;
+      }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="section1">
       <div class="profile-img-section">
-        <img
-          src="https://tse2.mm.bing.net/th?id=OIP.RZit-f8kmjDv27MWUOguJwHaEo&pid=Api&P=0&h=180"
-          alt="doggo"
-          class="profile-img"
-        />
+        <img src="./assets/img/profile.webp" alt="doggo" class="profile-img" />
       </div>
       <div class="profile-data">
-        <h1>Ancy Jemi P</h1>
+        <h1>Ancy Jemi Goldbell P</h1>
         <h3>ancyjemii@gmail.com</h3>
       </div>
     </div>
     <div class="section2">
-      <h1 class="section-title">Objective</h1>
+      <h1 class="section-title color-palate">Objective</h1>
       <p>
-        I am highly motivated,recent bussiness school graduate selecting a
-        full-time position in finance
+        Young and talented engineer familiar with Java and latest technologies.
+        Loooking for an intenship position in a reputed organization where can I
+        learn and leverage my skills.
       </p>
     </div>
     <div class="section3">
-      <h1 class="section-title">Education</h1>
+      <h1 class="section-title color-palate">Education</h1>
+      <br />
       <table class="ed-table">
         <tr>
-          <th>Degree</th>
-          <th>Campus</th>
-          <th>Score %</th>
+          <th>Course</th>
+          <th>School/College</th>
+          <th>Year of Passing</th>
+          <th>Score % / CGPA</th>
         </tr>
         <tr>
-          <td>deg1</td>
-          <td>school</td>
-          <td>85%</td>
+          <td>B.E Computer Engineering</td>
+          <td>
+            Sri Shakthi Institute of Engineering and <br />Technology,
+            Coimbatore
+          </td>
+          <td>2022-2026</td>
+          <td>8.6</td>
         </tr>
         <tr>
-          <td>deg2</td>
-          <td>school</td>
-          <td>90%</td>
+          <td>HSC</td>
+          <td>ARC Matriculation Higher <br />Secondary School, Coimbatore</td>
+          <td>2022</td>
+          <td>93%</td>
+        </tr>
+        <tr>
+          <td>SSLC</td>
+          <td>ARC Matriculation Higher <br />Secondary School, Coimbatore</td>
+          <td>2020</td>
+          <td>87%</td>
         </tr>
       </table>
     </div>
-    <div class="section4">
-      <h1 class="section-title">Intenships</h1>
+    <!-- <div class="section4">
+      <h1 class="section-title color-palate">Intenships</h1>
       <p>
         <span class="companies"> ACCOUNT MANAGER / VANARSDEL , LTD </span>
         JUNE 2024 - profile-img-section Managed and grew key account by
         developing strong relation and implementing effective sales stratergies
       </p>
       <br />
-    </div>
+    </div> -->
     <div class="section5">
-      <h1 class="section-title">Skills</h1>
+      <h1 class="section-title color-palate">Skills</h1>
       <ul>
-        <li>MERN</li>
-        <li>SpringBoot</li>
-        <li>AWS</li>
-        <li>DevOPS</li>
+        <li>HTML,CSS</li>
+        <li>Excel</li>
+        <li>JAVA</li>
+        <li>JS</li>
+        <li>SQL</li>
       </ul>
+    </div>
+    <div class="section6">
+      <h1 class="section-title color-palate">Certificates</h1>
+      <p>
+        Certified HTML & CSS Professional
+        <a href="./assets/img/htmlcert.webp" target="_blank"
+          ><span
+            ><i class="fa-solid fa-up-right-from-square color-palate"></i></span
+        ></a>
+        <a href="./assets/img/csscert.webp" target="_blank"
+          ><span
+            ><i class="fa-solid fa-up-right-from-square color-palate"></i></span
+        ></a>
+      </p>
+      <p class="un-font">Unstop | 2024</p>
+      <p>
+        JavaScriptEs6 for beginners
+        <a href="./assets/img/jsccert.webp" target="_blank"
+          ><span
+            ><i class="fa-solid fa-up-right-from-square color-palate"></i></span
+        ></a>
+      </p>
+      <p class="un-font">Unstop | 2024</p>
+    </div>
+    <div class="section7">
+      <a href="tel:+91 9688297387">
+        <i class="fa-solid fa-phone text-white"></i>
+      </a>
+      <a href="mailto:ancyjemii@gmail.com" target="_blank">
+        <i class="fa-solid fa-envelope text-white"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/ancy-jemi-3009a3274/"
+        target="_blank"
+      >
+        <i class="fa-brands fa-linkedin text-white"></i>
+      </a>
     </div>
   </body>
 </html>
