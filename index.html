@@ -11,13 +11,14 @@
         padding: 0px;
       }
       body {
-        /* height: 100vh; */
+        height: 100vh;
         width: 100vw;
         background-color: #f5f5f5;
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: center;
+        overflow: scroll;
       }
       .section1 {
         width: 70%;
@@ -30,7 +31,8 @@
         align-items: center;
         justify-content: center;
         flex-direction: row;
-        border-radius: 5px;
+        position: sticky;
+        top: 0%;
       }
       .profile-img-section {
         width: 40%;
@@ -50,6 +52,11 @@
         height: 8rem;
         width: 8rem;
         border-radius: 50%;
+        background: rgba(250, 235, 235, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
       }
       .section2 {
         width: 70%;
@@ -133,13 +140,53 @@
         align-items: center;
         gap: 3rem;
         font-weight: bold;
-        background-color: #2f0743;
+        background-color: #430d43;
       }
       .text-white {
-        color: rgb(236, 228, 228);
+        color: rgb(241, 239, 239);
+      }
+      .text-black {
+        color: rgb(12, 12, 12);
       }
       .un-font {
         font-size: small;
+      }
+      .buttongit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 15px;
+        background-color: #2b0633;
+        outline: 3px #181717 solid;
+        outline-offset: -3px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: 400ms;
+      }
+
+      .buttongit .textgit {
+        color: white;
+        font-weight: 700;
+        font-size: 1em;
+        transition: 400ms;
+      }
+
+      .buttongit svg path {
+        transition: 400ms;
+      }
+
+      .buttongit:hover {
+        background-color: transparent;
+      }
+
+      .buttongit:hover .text {
+        color: #181717;
+      }
+
+      .buttongit:hover svg pathgit {
+        fill: #181717;
       }
     </style>
     <link
@@ -244,18 +291,25 @@
       <p class="un-font">Unstop | 2024</p>
     </div>
     <div class="section7">
-      <a href="tel:+91 9688297387">
+      <a href="tel:+91 9688297387" class="buttongit textgit">
         <i class="fa-solid fa-phone text-white"></i>
       </a>
-      <a href="mailto:ancyjemii@gmail.com" target="_blank">
+      <a href="mailto:ancyjemii@gmail.com" class="buttongit textgit">
         <i class="fa-solid fa-envelope text-white"></i>
       </a>
       <a
         href="https://www.linkedin.com/in/ancy-jemi-3009a3274/"
+        class="buttongit"
         target="_blank"
       >
         <i class="fa-brands fa-linkedin text-white"></i>
       </a>
     </div>
+    <!-- <a
+      href="https://www.linkedin.com/in/ancy-jemi-3009a3274/"
+      class="buttontwo"
+      target="_blank"
+      ><i class="fa-brands fa-linkedin text-black"></i
+    ></a> -->
   </body>
 </html>
