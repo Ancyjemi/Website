@@ -13,6 +13,7 @@
       body {
         height: 100vh;
         width: 100vw;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f5f5f5;
         display: flex;
         flex-direction: column;
@@ -20,19 +21,26 @@
         align-items: center;
         overflow: scroll;
       }
+
       .section1 {
         width: 70%;
         height: 10rem;
-        background: #41295a;
-        background: -webkit-linear-gradient(to right, #2f0743, #41295a);
-        background: linear-gradient(to right, #2f0743, #41295a);
+        background: rgb(170, 7, 107); /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #61045f, #aa076b);
+        background: linear-gradient(to right, #61045f, #aa076b);
         color: white;
         display: flex;
+        border-radius: 5px;
         align-items: center;
         justify-content: center;
         flex-direction: row;
         position: sticky;
         top: 0%;
+        box-shadow: 3px 0px 2.7px rgba(0, 0, 0, 0.062),
+          7.6px 0.1px 6.9px rgba(0, 0, 0, 0.089),
+          15.4px 0.2px 14.2px rgba(0, 0, 0, 0.111),
+          31.8px 0.4px 29.2px rgba(0, 0, 0, 0.138),
+          87px 1px 80px rgba(0, 0, 0, 0.2);
       }
       .profile-img-section {
         width: 40%;
@@ -52,15 +60,16 @@
         height: 8rem;
         width: 8rem;
         border-radius: 50%;
-        background: rgba(250, 235, 235, 0.25);
+        background: rgba(255, 255, 255, 0.5);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(0px);
-        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(4.5px);
+        -webkit-backdrop-filter: blur(4.5px);
+
         border: 1px solid rgba(255, 255, 255, 0.18);
       }
       .section2 {
         width: 70%;
-        height: 6rem;
+        height: 7rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -69,7 +78,7 @@
       }
       .section3 {
         width: 70%;
-        height: 15rem;
+        height: 22rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -79,57 +88,78 @@
       .section-title {
         font-weight: bold;
       }
-      .ed-table {
-        width: 100%;
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
-      th {
-        background-color: #3c0e63;
-        color: #fff;
-      }
-      th,
-      td {
-        padding: 2px;
-        border: 1px solid;
+      .hsc-line span {
+        float: right;
       }
       .section4 {
         width: 70%;
-        height: 10rem;
+        height: 11rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: start;
         border: 1px solid rgb(244, 236, 236);
       }
-      .companies {
-        color: black;
-        font-weight: bold;
+      ul.custom-bullets {
+        list-style: circle;
+        margin-left: 2rem;
       }
-      .section5 {
-        width: 70%;
-        height: 8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        border: 1px solid rgb(244, 236, 236);
+      ul.custom-bullets li::marker {
+        color: #0d010d;
       }
-      li {
+      ul.custom-square {
         list-style: square;
         margin-left: 2rem;
       }
-      .color-palate {
-        color: #2f0743;
+      ul.custom-square li::marker {
+        color: #0d010d;
       }
-      .section6 {
+      .color-palate {
+        color: #05010c;
+      }
+      .color-palate2 {
+        color: #4b0a3a;
+      }
+      .section5 {
         width: 70%;
-        height: 8rem;
+        height: 12rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: start;
         border: 1px solid rgb(244, 236, 236);
+      }
+      .section6 {
+        width: 70%;
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        border: 1px solid rgb(244, 236, 236);
+      }
+
+      .language-bar {
+        margin-bottom: 20px;
+      }
+
+      .label {
+        margin-bottom: 7px;
+        font-weight: bold;
+      }
+
+      .bar {
+        width: 100%;
+        height: 10px;
+        background-color: #b8b3b7;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .fill {
+        height: 100%;
+        background-color: #390537;
+        border-radius: 10px 0 0 10px;
       }
       .section7 {
         width: 70%;
@@ -140,53 +170,31 @@
         align-items: center;
         gap: 3rem;
         font-weight: bold;
-        background-color: #430d43;
-      }
-      .text-white {
-        color: rgb(241, 239, 239);
-      }
-      .text-black {
-        color: rgb(12, 12, 12);
+        background-color: rgb(105, 8, 68);
+        position: sticky;
+        bottom: 0%;
+        border-radius: 5px;
       }
       .un-font {
         font-size: small;
       }
+
       .buttongit {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         padding: 10px 15px;
         gap: 15px;
-        background-color: #2b0633;
-        outline: 3px #181717 solid;
-        outline-offset: -3px;
-        border-radius: 5px;
-        border: none;
+        background-color: transparent;
         cursor: pointer;
-        transition: 400ms;
-      }
-
-      .buttongit .textgit {
-        color: white;
-        font-weight: 700;
-        font-size: 1em;
-        transition: 400ms;
-      }
-
-      .buttongit svg path {
-        transition: 400ms;
+        overflow: hidden;
+        border-radius: 5px;
+        color: #f9fef1;
       }
 
       .buttongit:hover {
-        background-color: transparent;
-      }
-
-      .buttongit:hover .text {
-        color: #181717;
-      }
-
-      .buttongit:hover svg pathgit {
-        fill: #181717;
+        color: #131414;
+        background-color: white;
       }
     </style>
     <link
@@ -203,8 +211,8 @@
         <img src="./assets/img/profile.webp" alt="doggo" class="profile-img" />
       </div>
       <div class="profile-data">
-        <h1>Ancy Jemi Goldbell P</h1>
-        <h3>ancyjemii@gmail.com</h3>
+        <h2>Ancy Jemi Goldbell P</h2>
+        <h5>ancyjemii@gmail.com</h5>
       </div>
     </div>
     <div class="section2">
@@ -218,66 +226,52 @@
     <div class="section3">
       <h1 class="section-title color-palate">Education</h1>
       <br />
-      <table class="ed-table">
-        <tr>
-          <th>Course</th>
-          <th>School/College</th>
-          <th>Year of Passing</th>
-          <th>Score % / CGPA</th>
-        </tr>
-        <tr>
-          <td>B.E Computer Engineering</td>
-          <td>
-            Sri Shakthi Institute of Engineering and <br />Technology,
-            Coimbatore
-          </td>
-          <td>2022-2026</td>
-          <td>8.6</td>
-        </tr>
-        <tr>
-          <td>HSC</td>
-          <td>ARC Matriculation Higher <br />Secondary School, Coimbatore</td>
-          <td>2022</td>
-          <td>93%</td>
-        </tr>
-        <tr>
-          <td>SSLC</td>
-          <td>ARC Matriculation Higher <br />Secondary School, Coimbatore</td>
-          <td>2020</td>
-          <td>87%</td>
-        </tr>
-      </table>
+      <ul class="custom-bullets">
+        <li>
+          <h2>B.E Computer Engineering</h2>
+          <p>
+            Sri Shakthi Institute of Engineering and Technology, Coimbatore<br />2022-2026
+          </p>
+        </li>
+        <li>
+          <div class="hsc-line">
+            <h2>HSC<span>Percentage: 93%</span></h2>
+          </div>
+          <p>ARC Matriculation Higher Secondary School, Coimbatore<br />2022</p>
+        </li>
+        <li>
+          <div class="hsc-line">
+            <h2>SSLC<span>Percentage: 87%</span></h2>
+          </div>
+          <p>ARC Matriculation Higher Secondary School, Coimbatore<br />2020</p>
+        </li>
+      </ul>
     </div>
-    <!-- <div class="section4">
-      <h1 class="section-title color-palate">Intenships</h1>
-      <p>
-        <span class="companies"> ACCOUNT MANAGER / VANARSDEL , LTD </span>
-        JUNE 2024 - profile-img-section Managed and grew key account by
-        developing strong relation and implementing effective sales stratergies
-      </p>
-      <br />
-    </div> -->
-    <div class="section5">
+    <div class="section4">
       <h1 class="section-title color-palate">Skills</h1>
-      <ul>
-        <li>HTML,CSS</li>
+      <ul class="custom-square">
+        <li>HTML , CSS</li>
         <li>Excel</li>
         <li>JAVA</li>
-        <li>JS</li>
+        <li>Basics in JS</li>
         <li>SQL</li>
       </ul>
     </div>
-    <div class="section6">
+    <div class="section5">
       <h1 class="section-title color-palate">Certificates</h1>
       <p>
         Certified HTML & CSS Professional
         <a href="./assets/img/htmlcert.webp" target="_blank"
           ><span
-            ><i class="fa-solid fa-up-right-from-square color-palate"></i></span
+            ><i
+              class="fa-solid fa-up-right-from-square color-palate2"
+            ></i></span
         ></a>
         <a href="./assets/img/csscert.webp" target="_blank"
           ><span
-            ><i class="fa-solid fa-up-right-from-square color-palate"></i></span
+            ><i
+              class="fa-solid fa-up-right-from-square color-palate2"
+            ></i></span
         ></a>
       </p>
       <p class="un-font">Unstop | 2024</p>
@@ -285,31 +279,52 @@
         JavaScriptEs6 for beginners
         <a href="./assets/img/jsccert.webp" target="_blank"
           ><span
-            ><i class="fa-solid fa-up-right-from-square color-palate"></i></span
+            ><i
+              class="fa-solid fa-up-right-from-square color-palate2"
+            ></i></span
         ></a>
       </p>
       <p class="un-font">Unstop | 2024</p>
     </div>
+    <div class="section6">
+      <h1>Language</h1>
+
+      <div class="language-bar">
+        <div class="label">English (R, W, S)</div>
+        <div class="bar">
+          <div class="fill" style="width: 70%"></div>
+        </div>
+      </div>
+
+      <div class="language-bar">
+        <div class="label">Tamil (R, W, S)</div>
+        <div class="bar">
+          <div class="fill" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="section7">
-      <a href="tel:+91 9688297387" class="buttongit textgit">
-        <i class="fa-solid fa-phone text-white"></i>
+      <a href="tel:+91 9688297387" class="buttongit type1">
+        <i class="fa-solid fa-phone"></i>
       </a>
-      <a href="mailto:ancyjemii@gmail.com" class="buttongit textgit">
-        <i class="fa-solid fa-envelope text-white"></i>
+      <a href="mailto:ancyjemii@gmail.com" class="buttongit type1">
+        <span><i class="fa-solid fa-envelope"></i></span>
       </a>
       <a
         href="https://www.linkedin.com/in/ancy-jemi-3009a3274/"
-        class="buttongit"
+        class="buttongit type1"
         target="_blank"
       >
-        <i class="fa-brands fa-linkedin text-white"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a
+        href="https://github.com/Ancyjemi"
+        class="buttongit type1"
+        target="_blank"
+      >
+        <i class="fa-brands fa-github"></i>
       </a>
     </div>
-    <!-- <a
-      href="https://www.linkedin.com/in/ancy-jemi-3009a3274/"
-      class="buttontwo"
-      target="_blank"
-      ><i class="fa-brands fa-linkedin text-black"></i
-    ></a> -->
   </body>
 </html>
