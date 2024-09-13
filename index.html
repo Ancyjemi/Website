@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
     <style>
       * {
         margin: 0px;
@@ -21,7 +21,6 @@
         align-items: center;
         overflow: scroll;
       }
-
       .section1 {
         width: 70%;
         height: 10rem;
@@ -138,6 +137,15 @@
         align-items: start;
         border: 1px solid rgb(244, 236, 236);
       }
+      .section8 {
+        width: 70%;
+        height: 16rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        border: 1px solid rgb(244, 236, 236);
+      }
 
       .language-bar {
         margin-bottom: 20px;
@@ -158,7 +166,7 @@
 
       .fill {
         height: 100%;
-        background-color: #390537;
+        background-color: #9e1854;
         border-radius: 10px 0 0 10px;
       }
       .section7 {
@@ -206,6 +214,7 @@
     />
   </head>
   <body>
+    <!-- <div class="main"> -->
     <div class="section1">
       <div class="profile-img-section">
         <img src="./assets/img/profile.webp" alt="doggo" class="profile-img" />
@@ -256,6 +265,10 @@
         <li>Basics in JS</li>
         <li>SQL</li>
       </ul>
+    </div>
+    <div class="section8">
+      <h1>Projects</h1>
+      <p>Bakery Order and Billing App</p>
     </div>
     <div class="section5">
       <h1 class="section-title color-palate">Certificates</h1>
@@ -326,5 +339,33 @@
         <i class="fa-brands fa-github"></i>
       </a>
     </div>
+    <!-- </div> -->
   </body>
+  <script>
+    const number = 10;
+    let string = "hi";
+    let boolean = false;
+    let nullvalue = null;
+    let undefinedvalue = undefined;
+    console.log(number);
+    console.log(string);
+    console.log(boolean);
+    console.log(nullvalue);
+    console.log(undefinedvalue);
+    // alert(x);
+    let nam = {
+      name: "Ancy", // key-value pair
+      phone: 9688297387,
+    };
+    let nameee = {
+      name: "Ancy", // key-value pair
+      phone: 9688297387,
+    };
+    console.log(nam.name);
+    let dataarray = [nam, name, "hi", false];
+    console.log(dataarray);
+    console.log(dataarray[3]);
+    let Hi = "hi";
+    let hi = "hi";
+  </script>
 </html>
